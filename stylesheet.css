@@ -179,6 +179,13 @@ position:absolute;
 right:0;
 bottom:10px;
 }
+/* 
+@media screen and (orientation:portrait) {
+  body{
+    background: url("func.js:alert();");
+  }
+} */
+
 /*The CSS following this line is for the Blog Page*/
 .blog_post{
   margin: 1vw;

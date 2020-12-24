@@ -14,3 +14,18 @@ function hidden_art(){
   hidden[3].style.display="inline";
   button[1].style.display="none";
 }
+
+// if(window.innerHeight > window.innerWidth){
+//   alert("Please use Landscape!");
+// }
+
+
+window.onresize = function (event) {
+  applyOrientation();
+}
+
+function applyOrientation() {
+  if (window.innerHeight > window.innerWidth) {
+    alert("Please view in Landscape mode for optimal experience!");
+  }
+}
