@@ -7,189 +7,13 @@
     <title>Anirban Goswami</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Bangers&family=Zilla+Slab:ital,wght@1,300&family=Lobster&display=swap" rel="stylesheet">
-    <style media="screen">
-      body{background-color:black;
-        font-family: 'Archivo', sans-serif;
-        font-size:1vw;
-        color:white;
-        margin:0px;
 
-      }
-      #date{font-weight:bold;}
-      #timeline{
-        overflow-x:hidden;
-        overflow-y:scroll;
-        height:23vh;
-        scrollbar-width:none;
-        -ms-overflow-style:none;
-        z-index: 1;
-        background-image: linear-gradient(to top, rgba(0,0,0,.1), rgba(255,255,255, .3) 100%);
-        width: 100%;
-        padding-bottom:7vh;
-        margin:0px;
-      }
-      #timeline::-webkit-scrollbar{
-        display:none;
-      }
-      #entry{
-        padding-top:1vw;
-        padding-bottom:2vw;
-        text-align:center;
-        font-size:1.05vw;
-        transition:transform .3s;
-      }
-      #entry:hover{
-        transform:scale(1.3);
-        cursor:default;
-      }
-      header{
-        padding:2vh;
-        cursor:default;
-        height:5vw;
-        text-align:center;
-        overflow-x:hidden;
-        overflow-y:hidden;
-        background-color:#0;
-        z-index: 1;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0, .9) 100%);
-        position:sticky;
-        top:0;
-      }
-
-        .slide-1,
-        .slide-2,
-        .slide-3,
-        .slide-4{
-          position: absolute;
-          display: block;
-	        width: 100%;
-          font-size:1.75vw;
-          font-family: 'Zilla Slab', serif;
-	         animation-duration: 35s;
-	         animation-timing-function: ease-in-out;
-           animation-iteration-count: infinite;
-        }
-        .slide-1{
-          animation-name:anim-1;
-        }
-        .slide-2{
-          animation-name:anim-2;
-        }
-        .slide-3{
-          animation-name:anim-3;
-        }
-        .slide-4{
-          animation-name: anim-4;
-        }
-        /*
-          The keyframe animation is done as such:
-            Step 1: Decide how many slides you want.
-            Step 2: Divide 100% by the number of slides (in here it is 25% because I have 4 slides) to get the alloted slot for each slide
-            Step 3: We will have each slide be in a state of no-show for 1/4th of their alloted slot(in this case it is 1/4 of 25% which is 6.25%) and they will be in a state of show for 1/2 of the alloted slot, followed again by no-show for the rest of the duration of the total slide-show.
-            Step 4:Calculate the 'no-show' and 'show' period of each slide, and edit it in the @keyframe block.
-            */
-@keyframes anim-1 {
-	0%, 6.25% { left: -1%; opacity: 0; } /*Slide 1 will stay in the 'no-show' period for 1/4th of the alotted 25%*/
-  6.25%, 18.75% { left: 0%; opacity: 1; }/*Slide 1 will stay in the 'show' state for 1/2 of the allotted 25%*/
-  25%, 100% { left: 1%; opacity: 0; }/*From 25% to 100% of the total slide-show, slide-1 will stay in a state of 'no-show'*/
-}
-
-@keyframes anim-2 {
-	0%, 25% { left: -1%; opacity: 0; }
-  31.25%, 43.75% { left: 0%; opacity: 1; }
-  50%, 100% { left: 1%; opacity: 0; }
-}
-
-@keyframes anim-3 {
-	0%, 50% { left: -1%; opacity: 0; }/*For the first 50% of the total animation, anim-3 stays in 'no-show' state*/
-  56.25%, 68.75% { left: 0%; opacity: 1; }/*After 1/4th of the allotted 25%, anim-3 enters the 'show state' where it stays for 12.25 % (which is for 25/2 the alloted time)*/
-  75%, 100% { left: 1%; opacity: 0; }/*After this, anim-3 goes to a state of 'no-show' from 75% to 100% of the total animation*/
-}
-@keyframes anim-4 {
-	0%, 75% { left: -1%; opacity: 0; }/*For the first 75% of the entire slide-show, anim-4 stays in 'no-show' state*/
-  81.25%, 93.75% { left: 0%; opacity: 1; } /*After 1/4th of the allotted 25%, anim-4 enters the 'show state' where it stays for 12.25 % (which is for 25/2 the alloted time)*/
-  100% { left: 1%; opacity: 0; }/*After this, anim-4 goes to the 'no-show' state again following the same pattern as the other slides*/
-}
-a{
-  color:hotpink;
-}
-h2{
-  padding:1vw;
-  font-family: 'Zilla Slab', serif;
-}
-.bio{
-  padding:1vw;
-  font-size:1vw;
-  z-index: 1;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(255,255,255, .3) 100%);
-
-}
-.projects{
-  padding: 1vh;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:space-evenly;
-  align-items:flex-start;
-}
-#Project_entry{
-  width:22vw;
-  object-fit:contain;
-}
-.project_img{
-  width:22vw;
-  height:12vw;
-}
-button{
-  color:hotpink;
-  border:none;
-  background:none;
-  font-size:1.7vw;
-}
-.hidden, .hide{
-  display:none;
-}
-
-.artworks{
-  padding: 2vh;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:space-evenly;
-  align-items:center;
-}
-
-.art_entry{
-  padding:1vh;
-  width:30vw;
-  object-fit:contain;
-}
-.art_img{
-  width:30vw;
-}
-footer{
-  position:relative;
-  height:9vw;
-  font-size:2.5vh
-  z-index: 1;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(128,0,0, .3) 200%);
-}
-footer p{
-  text-align:center;
-}
-.contact{
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-}
-.footnote{
-  position:absolute;
-  right:0;
-  bottom:10px;
-}
-
-    </style>
+    <link rel="stylesheet" href="/stylesheet.css">
   </head>
   <body>
-    Welcome, traveller! Feel free to look around and reach out to me if you want!
+<p class="welcome">Welcome, traveller! Feel free to look around & reach out to me if you want!
+</p>
+
     <header>
 
       <p class="slide-1">Anirban Goswami - Learner, Tinkerer, Space Enthusiast & Computer Engineering Student</p>
@@ -372,8 +196,11 @@ of mine:
       </div>
     </div>
 
+<!-- <div class="blogs">
+  <h2>Read My <a href="/blogs.html" target="_blank"> Blogs</a></h2>
 
-    <h2>I enjoy all kinds of art- be it digital, 2D, 3D along with the traditional media of painting! Here are some of my artworks!</h2>
+</div> -->
+    <h2>I dabble in all sorts of art- be it digital, 2D, 3D along with the traditional medias, of course!</h2>
       <div class="artworks" id="gallery">
         <div class="art_entry" id="art_entry">
           <h4 id="art_title">Piano</h4>
@@ -381,10 +208,11 @@ of mine:
           <p>Made with Blender(an open-source, free, 3D tool), this took a long time to render, especially because of my amateur skills, but also because the laptop I used to render this isn't particularly powerful!</p>
         </div>
         <div class="art_entry" id="art_entry">
-    <h4 id="art_title">Girl</h4>
-    <img src="../assets/girl.jpg" alt="Girl_traditional_painting" class="art_img">
-    <p>I started this piece as a sunset by the beach, but I changed my mind. And I might do it yet again! That's the fun of having a canvas and traditional media!</p>
-  </div>
+          <h4 id="art_title">Alone</h4>
+          <img src="../assets/alone.jpg" alt="Alone_traditional_painting" class="art_img">
+          <p>This is a special painting. I was trying to capture the infinitude of space through layering colours and using various mediums, including a toothbrush, sponge, toilet paper & more. The painting looks really cool when viewed against a light source!</p>
+        </div>
+
         <div class="art_entry" id="art_entry">
           <h4 id="art_title">Donut</h4>
           <img src="../assets/donut.png" alt="Donut_3D_blender" class="art_img">
@@ -411,10 +239,10 @@ of mine:
         <p>I was trying to draw all the trigonometric waves super-imposed on each other. I made some mistakes. But the painting must carry on! And so, I did! Can't say I'm not surprised XD</p>
       </div>
       <div class="art_entry hide" id="art_entry">
-        <h4 id="art_title">Alone</h4>
-        <img src="../assets/alone.jpg" alt="Alone_traditional_painting" class="art_img">
-        <p>This is a special painting. I was trying to capture the infinitude of space through layering colours and using various mediums, including a toothbrush, sponge, toilet paper & more. The painting looks really cool when viewed against a light source!</p>
-      </div>
+  <h4 id="art_title">Girl</h4>
+  <img src="../assets/girl.jpg" alt="Girl_traditional_painting" class="art_img">
+  <p>I started this piece as a sunset by the beach, but I changed my mind. And I might do it yet again! That's the fun of having a canvas and traditional media!</p>
+</div>
 
     </div>
 
@@ -436,23 +264,7 @@ of mine:
       </div>
     </footer>
 
-    <script type="text/javascript">
-      function hidden_projects(){
-        var hidden=document.getElementsByClassName("hidden");
-        var button= document.getElementsByName("hiding");
-        hidden[0].style.display="inline-block";
-        hidden[1].style.display="inline-block";
-        button[0].style.display="none";
-      }
-      function hidden_art(){
-        var hidden=document.getElementsByClassName("hide");
-        var button= document.getElementsByName("hiding");
-        hidden[0].style.display="inline";
-        hidden[1].style.display="inline";
-        hidden[2].style.display="inline";
-        hidden[3].style.display="inline";
-        button[1].style.display="none";
-      }
-      </script>
+    <script src="/func.js"></script>
+    
     </body>
 </html>
