@@ -18,6 +18,25 @@ function hidden_art(){
 // if(window.innerHeight > window.innerWidth){
 //   alert("Please use Landscape!");
 // }
+var wel=document.getElementsByClassName("welcome")
+$(document).ready(function() {
+$( "wel" ).hover(function() {
+	$(this).css("color",getRandomColor());
+	}, function() {
+    $(this).css("color","");
+  }
+);
+
+function getRandomColor () {
+ var letters = '0123456789ABCDEF'.split('');
+ var color = '#';
+ for (var i = 0; i < 6; i++) {
+     color += letters[Math.floor(Math.random() * 16)];
+ }
+ return color;
+    }
+})
+
 
 
 window.onresize = function (event) {
@@ -26,6 +45,6 @@ window.onresize = function (event) {
 
 function applyOrientation() {
   if (window.innerHeight > window.innerWidth) {
-    alert("Please view in Landscape mode for optimal experience!");
+    alert("Please view in a desktop browser for optimal experience!");
   }
 }
