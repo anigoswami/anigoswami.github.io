@@ -23,7 +23,9 @@ email: agoswami@mun.ca
 description: >- # this means to ignore newlines until "baseurl:"
   This is a test to see if stuff works
 
-baseurl: /blog # the subpath of your site, e.g. /blog
+future: TRUE
+
+baseurl:  # the subpath of your site, e.g. /blog
 url: https://anigoswami.github.io # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  anigoswami
 twitter_username: jigglyPuff1n
@@ -31,6 +33,7 @@ twitter_username: jigglyPuff1n
 theme: minima
 plugins:
   - jekyll-feed
+
 
 
 # Exclude from processing.
