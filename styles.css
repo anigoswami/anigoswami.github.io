@@ -24,6 +24,8 @@ body :not(.fa){
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
+    z-index: 3;
+
 }
 
 .navlink{
@@ -63,6 +65,9 @@ body :not(.fa){
     color:var(--text-color);
     background-color: var(--background-color);
     overflow:hidden;
+    align-items: center;
+    justify-content: center;
+    display: grid;
 }
 .title{
     text-align: center;
@@ -71,15 +76,40 @@ body :not(.fa){
     
 }
 
+#more{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    margin:0% 47% 0% 47%;
+    background: none;
+    color: var(--text-color);
+    padding:1em;
+    transition: 0.3s;
+
+}
+
+#more:hover{
+    color: var(--background-color);
+    background:var(--text-color);
+    cursor: pointer;
+}
 
 
-.magazine{
+.magazine,.magazine2{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     justify-items: space-around;
+    align-self: flex-start;
 }
+
+.magazine2{
+    display:none;
+}
+
 
 .mag-item{
     
@@ -87,6 +117,12 @@ body :not(.fa){
     border: solid 3px var(--background-color2);
     margin: 1em;
     background-color: var(--background-color2);
+    z-index: 0;
+    transition: 0.3s;
+}
+
+.mag-item:hover{
+    scale:105%;
 }
 
 .mag-img{
@@ -143,7 +179,6 @@ i:hover{
         height:5%;
         position: fixed;
         top:0;
-        z-index: 3;
     }
     .navlink{
         width: 100%;
@@ -152,9 +187,28 @@ i:hover{
         margin-top: 0;
     }
     .folio{
-        overflow: auto;
+        height: auto;
+        width: 100%;
+        padding-bottom: 1em;;
+    }
+    .title{
+        scale:90%;
     }
     .mag-item{
         scale: 65%;
+    }
+    #more{
+        margin: 0% 40% 0% 40%;
+    }
+}
+
+@media screen and (max-height:600px){
+    .navbar{
+        height:8%;
+    }
+}
+@media screen and (max-height:300px){
+    .navbar{
+        height:15%;
     }
 }
