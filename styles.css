@@ -58,19 +58,45 @@ body :not(.fa){
 
 .folio{
     height:100vh;
+    width: 100%;
     color:white;
     background-color: var(--background-color);
+    overflow:hidden;
 }
 .title{
     text-align: center;
-    padding:3.5%;
+    padding:2em;
     font-weight: 200;
     
 }
+
+
+
 .magazine{
-    display: grid;
-    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+    justify-items: space-around;
+}
+
+.mag-item{
+    
+    text-decoration: none;
+    border: solid 3px white;
+    margin: 1em;
+}
+
+.mag-img{
+    width: 540px;
+    height:320px;
+}
+
+.img-caption{
+    width: 540px;
+    overflow: auto;
+    font-size: 1.5em;
+    background-color: white;
     text-align: center;
 }
 
