@@ -88,12 +88,12 @@ body :not(.fa){
 }
 
 .mag-img{
-    width: 540px;
-    height:320px;
+    width: 35em;
+    height:20em;
 }
 
 .img-caption{
-    width: 540px;
+    width: 23.5em;
     overflow: auto;
     font-size: 1.5em;
     background-color: white;
@@ -129,4 +129,18 @@ i:hover{
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+
+@media screen and (max-width: 1000px){
+
+    .navlink{
+        width: 100%;
+    }
+    .intro{
+        margin-top: 0;
+    }
+    .mag-item{
+        scale: 70%;
+    }
 }
