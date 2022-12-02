@@ -4,6 +4,7 @@
     --navbar-color:rgb(236, 25, 124);
     --background-color:#1B1B32;
     --text-color: aliceblue;
+    --background-color2:#121220;
 }
 
 *,::before,::after{
@@ -44,7 +45,7 @@ body :not(.fa){
 .intro{
     margin-top: -2.5em;
     height:100vh;
-    color:white;
+    color:var(--text-color);
     display: grid;
     align-content: center;
     justify-content: center;
@@ -59,7 +60,7 @@ body :not(.fa){
 .folio{
     height:100vh;
     width: 100%;
-    color:white;
+    color:var(--text-color);
     background-color: var(--background-color);
     overflow:hidden;
 }
@@ -83,8 +84,9 @@ body :not(.fa){
 .mag-item{
     
     text-decoration: none;
-    border: solid 3px white;
+    border: solid 3px var(--background-color2);
     margin: 1em;
+    background-color: var(--background-color2);
 }
 
 .mag-img{
@@ -96,8 +98,9 @@ body :not(.fa){
     width: 23.5em;
     overflow: auto;
     font-size: 1.5em;
-    background-color: white;
+    background-color: var(--background-color2);
     text-align: center;
+    color: var(--text-color);
 }
 
 .contact{
