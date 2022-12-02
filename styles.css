@@ -134,6 +134,7 @@ i:hover{
 
 @media screen and (max-width: 1000px){
 
+
     .navbar{
         height:5%;
         position: fixed;
@@ -146,7 +147,10 @@ i:hover{
     .intro{
         margin-top: 0;
     }
+    .folio{
+        overflow: auto;
+    }
     .mag-item{
-        scale: 70%;
+        scale: 65%;
     }
 }
