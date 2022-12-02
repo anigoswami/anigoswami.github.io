@@ -134,6 +134,12 @@ i:hover{
 
 @media screen and (max-width: 1000px){
 
+    .navbar{
+        height:5%;
+        position: fixed;
+        top:0;
+        z-index: 3;
+    }
     .navlink{
         width: 100%;
     }
