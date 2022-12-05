@@ -131,6 +131,13 @@ body :not(.fa){
     margin-left:2px;
 }
 
+#canoe>img{
+    
+    width: 37em;
+    height:22em;
+}
+
+
 .img-caption{
     width: 23.5em;
     overflow: auto;
