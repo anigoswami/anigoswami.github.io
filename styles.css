@@ -179,7 +179,24 @@ i:hover{
 }
 
 
-@media screen{
+@media screen and (max-width:1850px) {
+    .folio{
+        height:auto;
+        overflow: visible;
+        padding-bottom: 1em;
+    }
+    .mag-item{
+        scale:82%;
+    }
+    .mag-item:hover{
+        scale:87%;
+    }
+    #more{
+        margin:0% 45% 0% 45%;
+    }
+}
+
+@media screen and (max-width:1600px){
 
 
     .navbar{
