@@ -97,7 +97,7 @@ body :not(.fa){
 }
 
 
-.magazine,.magazine2{
+.magazine,.magazine2,.more{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -179,7 +179,7 @@ i:hover{
 }
 
 
-@media screen and (max-width: 1000px){
+@media screen{
 
 
     .navbar{
@@ -211,6 +211,7 @@ i:hover{
         margin: 0% 40% 0% 40%;
     }
 }
+
 
 @media screen and (max-height:600px){
     .navbar{
