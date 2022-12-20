@@ -21,7 +21,7 @@ body :not(.fa){
     position: sticky;
     top:0;
     background: var(--navbar-color);
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row-reverse;
     z-index: 3;
@@ -201,6 +201,7 @@ i:hover{
 
     .navbar{
         height:5%;
+        width: 100%;
         position: fixed;
         top:0;
     }
