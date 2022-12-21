@@ -105,6 +105,8 @@ body :not(.fa){
     align-items: center;
     justify-content: center;
     justify-items: space-around;
+    align-self: flex-start;
+    
 }
 
 .magazine2{
@@ -230,15 +232,18 @@ i:hover{
         margin: 0% 40% 0% 40%;
     }
 }
-
-
-@media screen and (max-height:600px){
-    .navbar{
-        height:8%;
+@media screen and (max-width:512px) {
+    .navbar, .navlink{
+        display: none;
     }
-}
-@media screen and (max-height:300px){
-    .navbar{
-        height:15%;
+    .magazine{
+        margin: 10%;
     }
+    .mag-item{
+        scale: 100%;
+    }
+    .img-caption{
+        scale: 75%;
+    }
+
 }
