@@ -15,6 +15,8 @@
 body :not(.fa){
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.15em;
+    width: 100vw;
+    overflow: hidden;
 }
 .navbar{
     height:10%;
@@ -61,7 +63,7 @@ body :not(.fa){
 
 .folio{
     height:100vh;
-    width: 100%;
+    width: 100vw;
     color:var(--text-color);
     background-color: var(--background-color);
     overflow:hidden;
@@ -103,7 +105,6 @@ body :not(.fa){
     align-items: center;
     justify-content: center;
     justify-items: space-around;
-    align-self: flex-start;
 }
 
 .magazine2{
