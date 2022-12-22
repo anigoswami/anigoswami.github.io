@@ -15,8 +15,6 @@
 body :not(.fa){
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.15em;
-    width: 100vw;
-    overflow: hidden;
 }
 .navbar{
     height:10%;
@@ -208,9 +206,7 @@ i:hover{
         position: fixed;
         top:0;
     }
-    .navlink{
-        width: 100%;
-    }
+    
     .intro{
         margin-top: 0;
     }
@@ -219,28 +215,34 @@ i:hover{
         width: 100%;
         padding-bottom: 1em;;
     }
-    .title{
-        scale:90%;
-    }
-    .mag-item{
-        scale: 65%;
-    }
-    .mag-item:hover{
-        scale:69%;
-    }
+   
     #more{
         margin: 0% 40% 0% 40%;
     }
 }
+
+@media screen and (max-width:810px) {
+    .navlink{
+        width: 15%;
+    }
+    
+}
+
 @media screen and (max-width:512px) {
     .navbar, .navlink{
         display: none;
     }
-    .magazine{
-        margin: 10%;
+    .title{
+        scale:80%;
     }
+    
     .mag-item{
-        scale: 100%;
+        scale: 65%;
+        padding: 0;
+        margin:0;
+    }
+    .mag-item:hover{
+        scale:69%
     }
     .img-caption{
         scale: 75%;
